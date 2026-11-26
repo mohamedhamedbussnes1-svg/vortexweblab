@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@layer base {
+  html,
+  body,
+  #root {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #16120e;
+    color: #faf6ef;
+    font-family: "Tajawal", system-ui, -apple-system, sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: none;
+  }
+
+  h1,
+  h2,
+  h3,
+  .font-display {
+    font-family: "Cairo", "Tajawal", sans-serif;
+  }
+
+  .font-mono-num {
+    font-family: "IBM Plex Mono", "Cairo", monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@keyframes vortexSpinCw {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes vortexSpinCcw {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes vortexReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(16px) scale(0.94);
+    letter-spacing: 0.22em;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    letter-spacing: 0.06em;
+  }
+}
+
+@keyframes vortexProgressBar {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.vortex-spin-cw {
+  animation: vortexSpinCw 11s linear infinite;
+}
+
+.vortex-spin-ccw {
+  animation: vortexSpinCcw 8s linear infinite;
+}
+
+.vortex-reveal {
+  animation: vortexReveal 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.vortex-bar-fill {
+  transform-origin: right center;
+  animation: vortexProgressBar 3.4s linear forwards;
+}
+

@@ -1,0 +1,6 @@
+{
+  "name": "ELMOALEM SIMULATOR — محاكي المعلم",
+  "description": "محاكي المعلم – فول وطعمية: لعبة محاكاة حياة مصرية واقعية ثلاثية الأبعاد داخل حارة شعبية مع إدارة محل الفول والطعمية، تفاعل الزبائن باللهجة المصرية، القيادة والتوصيل، والمنزل المشترك.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

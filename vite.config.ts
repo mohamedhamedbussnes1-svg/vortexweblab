@@ -54,6 +54,10 @@ export default defineConfig(() => {
         },
         workbox: {
           globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'],
+          // These large AI Studio reference images are not used by the game UI.
+          // Keep them in public for compatibility, but do not download/cache them
+          // as part of the first PWA visit.
+          globIgnores: ['assets/aistudio/**/*'],
           maximumFileSizeToCacheInBytes: 6 * 1024 * 1024,
           navigateFallbackDenylist: [/^\/api/, /^\/ws/],
         },
